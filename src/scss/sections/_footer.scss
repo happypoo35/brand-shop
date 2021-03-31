@@ -1,0 +1,29 @@
+.footer {
+  background: $Dark-gray;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .social {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 0.5rem;
+
+    &-link {
+      display: grid;
+      place-items: center;
+      width: 2rem;
+      height: 2rem;
+      background: white;
+    }
+
+    &-icon {
+      fill: black;
+    }
+  }
+}

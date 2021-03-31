@@ -1,0 +1,30 @@
+.header {
+  background: $Dark-gray;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    margin-right: 2.5rem;
+  }
+
+  .search {
+    flex: 1;
+  }
+
+  &-panel {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .hamburger {
+    cursor: pointer;
+  }
+}

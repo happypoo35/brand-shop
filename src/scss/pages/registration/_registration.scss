@@ -1,0 +1,33 @@
+.registration {
+  margin-bottom: 6rem;
+
+  &-header {
+    margin-bottom: 4rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 22.5rem 1fr;
+    gap: 8rem;
+  }
+
+  &-info {
+    h3,
+    p {
+      margin-bottom: 1.25rem;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      svg {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+}

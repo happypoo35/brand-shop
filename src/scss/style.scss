@@ -1,0 +1,25 @@
+@import "global/vars";
+@import "global/placeholders";
+@import "global/mixins";
+@import "global/global";
+@import "global/typography";
+
+@import "components/buttons";
+@import "components/inputs";
+@import "components/products-list";
+@import "components/product-card";
+
+@import "sections/header";
+@import "sections/page-header";
+@import "sections/menu";
+@import "sections/cta";
+@import "sections/footer";
+
+@import "pages/home/home";
+@import "pages/home/hero";
+@import "pages/home/offers";
+@import "pages/home/featured-products";
+@import "pages/home/features";
+
+@import "pages/registration/registration";
+@import "pages/registration/form";
