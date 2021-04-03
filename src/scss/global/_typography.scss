@@ -94,6 +94,10 @@ h6 {
   &.pink {
     font-weight: 400;
   }
+
+  &.filter-title {
+    font-weight: 400;
+  }
 }
 
 .offer-title {
@@ -128,13 +132,15 @@ p {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul {
   list-style: none;
 }
 
-.nav-link {
+.nav-link,
+.cat-link {
   font-size: 0.875rem;
   color: $Gray-text;
 
@@ -165,4 +171,9 @@ ul {
   &.pink {
     font-weight: 700;
   }
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 300;
 }

@@ -1,8 +1,10 @@
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useGlobalContext } from "../context";
 
 const Menu = () => {
   const { showMenu, setShowMenu } = useGlobalContext();
+  const menuRef = useRef();
   const menuItems = [
     {
       title: "men",
@@ -25,8 +27,23 @@ const Menu = () => {
     },
   ];
 
+  useEffect(() => {
+    const closeMenu = (e) => {
+      if (
+        !menuRef.current.contains(e.target) &&
+        e.target.classList[0] !== "hamburger"
+      ) {
+        setShowMenu(false);
+      }
+    };
+    document.addEventListener("mousedown", closeMenu);
+    return () => {
+      document.removeEventListener("mousedown", closeMenu);
+    };
+  });
+
   return (
-    <section className={showMenu ? "menu show" : "menu"}>
+    <section className={showMenu ? "menu show" : "menu"} ref={menuRef}>
       <img
         src="./images/icon-close.svg"
         alt="close"

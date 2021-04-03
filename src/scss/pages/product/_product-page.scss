@@ -1,0 +1,26 @@
+.product-header {
+  background: $Very-light-gray;
+  border-bottom: 1px solid $Light-gray;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+  }
+
+  img {
+    height: 100%;
+  }
+}
+
+.product-page {
+  &-info {
+    transform: translateY(-4rem);
+    margin-bottom: 4rem;
+  }
+
+  .products {
+    margin-bottom: 8rem;
+  }
+}

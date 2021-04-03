@@ -26,5 +26,9 @@
 
   .hamburger {
     cursor: pointer;
+
+    img {
+      pointer-events: none;
+    }
   }
 }

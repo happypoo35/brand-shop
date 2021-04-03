@@ -25,6 +25,21 @@ button {
       margin-right: 0.75rem;
     }
   }
+
+  &-cart-product {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 2rem .5rem 1.5rem;
+
+    svg {
+      margin-right: 1.375rem;
+      width: 1.625rem;
+
+      path {
+        fill: $Accent;
+      }
+    }
+  }
 }
 
 .btn-submit {

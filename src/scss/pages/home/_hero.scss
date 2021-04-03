@@ -17,6 +17,7 @@
   }
 
   &-text {
+    align-self: center;
     display: flex;
     align-items: center;
     padding-left: clamp(0rem, -9.5rem + 19vw, 4rem);

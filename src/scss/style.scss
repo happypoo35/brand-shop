@@ -8,6 +8,9 @@
 @import "components/inputs";
 @import "components/products-list";
 @import "components/product-card";
+@import "components/filter";
+@import "components/select";
+@import "components/quantity";
 
 @import "sections/header";
 @import "sections/page-header";
@@ -23,3 +26,9 @@
 
 @import "pages/registration/registration";
 @import "pages/registration/form";
+
+@import "pages/catalog/catalog";
+@import "pages/catalog/filters";
+
+@import "pages/product/product-page";
+@import "pages/product/product-info";

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useGlobalContext } from "../../context";
 import ProductCard from "../ProductCard";
 
@@ -19,7 +20,9 @@ const Featured = () => {
             return "";
           })}
         </div>
-        <button className="btn btn-pink">Browse All Product</button>
+        <Link to="/catalog">
+          <button className="btn btn-pink">Browse All Product</button>
+        </Link>
       </div>
     </section>
   );
