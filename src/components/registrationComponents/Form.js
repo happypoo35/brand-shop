@@ -14,7 +14,7 @@ const Form = () => {
         className="input"
         type="text"
         autoComplete="off"
-        placeholder="First Name"
+        placeholder="Last Name"
       />
       <div className="radio-container">
         <label className="radio-btn">

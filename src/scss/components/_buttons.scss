@@ -21,15 +21,24 @@ button {
     color: white;
     padding: 0.625rem 0.875rem;
 
-    img {
+    &:hover {
+      border: 2px solid white;
+    }
+
+    img,
+    svg {
       margin-right: 0.75rem;
+    }
+
+    svg {
+      font-size: 2rem;
     }
   }
 
   &-cart-product {
     display: flex;
     align-items: center;
-    padding: 0.5rem 2rem .5rem 1.5rem;
+    padding: 0.5rem 2rem 0.5rem 1.5rem;
 
     svg {
       margin-right: 1.375rem;
@@ -39,6 +48,31 @@ button {
         fill: $Accent;
       }
     }
+
+    .icon-added {
+      width: unset;
+      font-size: 1.75rem;
+    }
+  }
+
+  &.gray {
+    border-color: $Light-gray-text;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: $Gray-text;
+
+    &.small {
+      font-size: 0.75rem;
+      padding: 0.625rem 0.875rem;
+    }
+  }
+
+  &-solid-pink {
+    border: none;
+    background: $Accent;
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
   }
 }
 

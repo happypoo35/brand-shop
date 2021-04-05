@@ -26,9 +26,9 @@ const Grid = () => {
     {
       id: 4,
       subtitle: "luxirous & trendy",
-      title: "accesories",
+      title: "accessories",
       img: "./images/img-grid-4.jpg",
-      path: "/catalog",
+      path: "/catalog/men/Accessories",
     },
   ];
 

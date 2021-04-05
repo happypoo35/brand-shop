@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useGlobalContext } from "../context";
 
 const Header = () => {
-  const { showMenu, setShowMenu } = useGlobalContext();
+  const { showMenu, setShowMenu, cart } = useGlobalContext();
 
   return (
     <header className="header pad">
@@ -24,9 +24,14 @@ const Header = () => {
               className="profile"
             />
           </Link>
-          <Link to="/cart" aria-label="cart">
+          <Link to="/shopping cart" aria-label="cart">
             <div className="cart-icon">
               <img src="./images/icon-cart.svg" alt="cart" />
+              {cart.length > 0 ? (
+                <span className="cart-number">{cart.length}</span>
+              ) : (
+                ""
+              )}
             </div>
           </Link>
         </div>

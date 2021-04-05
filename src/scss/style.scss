@@ -8,6 +8,7 @@
 @import "components/inputs";
 @import "components/products-list";
 @import "components/product-card";
+@import "components/product-card-cart";
 @import "components/filter";
 @import "components/select";
 @import "components/quantity";
@@ -32,3 +33,7 @@
 
 @import "pages/product/product-page";
 @import "pages/product/product-info";
+
+@import "pages/cart/cart";
+@import "pages/cart/form";
+@import "pages/cart/checkout";

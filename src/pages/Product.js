@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { useGlobalContext } from "../context";
 import { ReactComponent as CartIcon } from "./icon-cart.svg";
+import { AiOutlineCheckCircle } from "react-icons/ai";
 import PageHeader from "../components/PageHeader";
 import Select from "../components/Select";
 import Quantity from "../components/Quantity";
@@ -9,7 +10,8 @@ import ProductCard from "../components/ProductCard";
 
 const Product = () => {
   const [quantity, setQuantity] = useState(1);
-  const { products } = useGlobalContext();
+  const [added, setAdded] = useState(false);
+  const { products, cart, setCart } = useGlobalContext();
   const { id } = useParams();
   const product = products[id - 1];
   const { category, gender, img, price, longText, title } = product;
@@ -23,6 +25,27 @@ const Product = () => {
       options: ["xs", "s", "m", "l", "xl"],
     },
   ];
+
+  const addToCart = () => {
+    setAdded(true);
+    const check = cart.every((el) => {
+      return el.id !== product.id;
+    });
+    if (check) {
+      setCart([...cart, { ...product, amount: quantity }]);
+    } else {
+      const existingItem = cart.find((item) => item.id === product.id);
+      existingItem.amount += quantity;
+      setCart([...cart.filter((el) => el.id !== product.id), existingItem]);
+    }
+  };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAdded(false);
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, [added]);
 
   return (
     <>
@@ -48,10 +71,17 @@ const Product = () => {
                 })}
                 <Quantity quantity={quantity} setQuantity={setQuantity} />
               </div>
-              <button className="btn btn-cart-product">
-                <CartIcon />
-                Add to Cart
-              </button>
+              {!added ? (
+                <button className="btn btn-cart-product" onClick={addToCart}>
+                  <CartIcon />
+                  Add to Cart
+                </button>
+              ) : (
+                <button className="btn btn-cart-product">
+                  <AiOutlineCheckCircle className="icon-added" />
+                  Added
+                </button>
+              )}
             </div>
           </div>
           <div className="products">

@@ -1,0 +1,48 @@
+.cart {
+  margin-top: 6rem;
+  margin-bottom: 8rem;
+
+  .container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 8rem;
+  }
+
+  &-items {
+    display: grid;
+    gap: 2.5rem;
+    align-items: flex-start;
+  }
+
+  &-buttons {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-controls {
+    max-width: 22.5rem;
+  }
+}
+
+.cart-empty {
+  height: 50vh;
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    width: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+}

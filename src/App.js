@@ -1,11 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Home from "./pages/Home";
-import Catalog from "./pages/Catalog";
-import Product from "./pages/Product";
-import Cart from "./pages/Cart";
-import Registration from "./pages/Registration";
-import Error from "./pages/Error";
+import { Home, Catalog, Product, Cart, Registration, Error } from "./pages";
 
 import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
@@ -27,7 +22,7 @@ const App = () => {
             <Route exact path="/catalog/:gender" component={Catalog} />
             <Route path="/catalog/:gender/:cat" component={Catalog} />
             <Route exact path="/product/:id" component={Product} />
-            <Route path="/cart" component={Cart} />
+            <Route path="/shopping cart" component={Cart} />
             <Route path="/registration" component={Registration} />
             <Route path="*" component={Error} />
           </Switch>

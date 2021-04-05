@@ -14,13 +14,24 @@ const AppProvider = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [cart, setCart] = useState([]);
 
-  const addToCart = (item) => {
-    // setCart([...cart, ...products.filter((el) => el.id === item)]);
-    setCart(new Set([...cart, ...products.filter((el) => el.id === item)]));
+  const addToCart = (id) => {
+    const check = cart.every((el) => {
+      return el.id !== id;
+    });
+    if (check) {
+      setCart([...cart, ...products.filter((el) => el.id === id)]);
+    } else {
+      const existingItem = cart.find((item) => item.id === id);
+      existingItem.amount += 1;
+      setCart([...cart.filter((el) => el.id !== id), existingItem]);
+      console.log("item already added");
+    }
   };
 
   return (
-    <AppContext.Provider value={{ products, showMenu, setShowMenu, addToCart }}>
+    <AppContext.Provider
+      value={{ products, showMenu, setShowMenu, cart, setCart, addToCart }}
+    >
       {children}
     </AppContext.Provider>
   );
