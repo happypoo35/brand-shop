@@ -1,4 +1,4 @@
-# Frontend Mentor - Crowdfunding product page
+# Brand Shop
 
 ![Design preview for Brand-Shop main page](./public/images/desktop-preview.jpg)
 
