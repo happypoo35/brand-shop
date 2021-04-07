@@ -30,8 +30,20 @@
     text-transform: uppercase;
     padding: 0.75rem 0 0 1rem;
 
+    &-label {
+      @include mobile {
+        display: none;
+      }
+    }
+
     svg {
       margin-left: 0.625rem;
+
+      @include mobile {
+        height: 1rem;
+        width: 1.5rem;
+        margin-left: unset;
+      }
 
       path {
         fill: $Dark-gray;
@@ -52,6 +64,10 @@
     opacity: 0;
     pointer-events: none;
     @extend %tr;
+
+    @include mobile {
+      width: 80vw;
+    }
   }
 
   &-section {

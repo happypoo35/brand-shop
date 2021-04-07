@@ -1,6 +1,10 @@
 .shipping-form {
   margin-bottom: 3.625rem;
 
+  @include tablet {
+    margin-bottom: unset;
+  }
+
   h5,
   input {
     margin-bottom: 1.25rem;

@@ -1,12 +1,17 @@
 .cart-item {
   display: grid;
   grid-template-columns: auto 1fr;
-  box-shadow: 0 0.75rem 1.5rem rgba(black, 0.13);
+  box-shadow: 0 1rem 1rem -0.75rem rgba(black, 0.1),
+    0 0.75rem 1.5rem rgba(black, 0.1);
 
   &-img {
     max-height: 19rem;
     max-width: 16.5rem;
     overflow: hidden;
+
+    @include mobile {
+      height: 100%;
+    }
 
     img {
       width: 100%;
@@ -17,6 +22,10 @@
 
   &-content {
     padding: 1.375rem 1.375rem 1.375rem 2rem;
+
+    @include mobile {
+      padding: 1rem;
+    }
   }
 
   &-header {
@@ -24,31 +33,40 @@
     justify-content: space-between;
     margin-bottom: 2.625rem;
 
+    @include mobile {
+      margin-bottom: 1.5rem;
+    }
+
     svg {
       cursor: pointer;
       margin-left: 1rem;
+      width: 1.25rem;
+      height: 1.25rem;
     }
   }
 
   li {
-    font-size: 1.375rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
   }
 
   .quantity {
+    @include mobile {
+      margin-right: 1rem;
+    }
+
     &-label {
       text-transform: capitalize;
-      font-size: 1.375rem;
+      font-size: 1rem;
     }
 
     &-btn {
-      width: 2rem;
-      height: 2rem;
+      width: 1.75rem;
+      height: 1.75rem;
       font-size: 1.25rem;
     }
 
     &-num {
-      font-size: 1.375rem;
+      font-size: 1rem;
     }
   }
 }

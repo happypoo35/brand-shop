@@ -11,7 +11,11 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  // overflow-x: hidden;
+
+  @include tablet {
+    overflow-x: hidden;
+  }
 }
 
 main {
@@ -30,6 +34,11 @@ main {
 .pad {
   padding-left: 2rem;
   padding-right: 2rem;
+
+  @include mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 img {

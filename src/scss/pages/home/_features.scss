@@ -8,6 +8,10 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem 1.875rem;
     place-items: center;
+
+    @include tablet {
+      grid-template-columns: unset;
+    }
   }
 }
 

@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import PageHeader from "../components/PageHeader";
 import ProductCard from "../components/ProductCard";
 import Filters from "../components/catalogComponents/Filters";
+import { Link } from "react-router-dom";
 
 const Catalog = () => {
   const pageName = "catalog";
@@ -17,9 +18,12 @@ const Catalog = () => {
       <>
         <PageHeader title={pageName} gender={gender} cat={cat} />
         <Filters />
-        <section className="pad" aria-label="empty result">
+        <section className="catalog-empty pad" aria-label="empty result">
           <div className="container">
-            <h2>No matching products</h2>
+            <h2 className="empty-title">No matching products</h2>
+            <Link to="/catalog">
+              <button className="btn gray">back to catalog</button>
+            </Link>
           </div>
         </section>
       </>

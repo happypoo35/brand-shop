@@ -4,13 +4,21 @@
   .container {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    gap: 1.875rem;
+    gap: clamp(1.25rem, 2.6vw, 1.875rem);
+
+    @include mobile {
+      grid-template-columns: unset;
+    }
   }
 
   .offer {
     position: relative;
     background: hsl(0, 20%, 11%);
     overflow: hidden;
+
+    article {
+      height: 100%;
+    }
 
     &:hover {
       .offer-img {
@@ -20,6 +28,11 @@
 
     &:last-child {
       grid-area: 2/1/3/4;
+
+      @include mobile {
+        grid-area: unset;
+        height: 7rem;
+      }
     }
 
     &-img {

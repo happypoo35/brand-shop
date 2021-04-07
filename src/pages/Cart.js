@@ -8,6 +8,11 @@ import { useGlobalContext } from "../context";
 const Cart = () => {
   const { cart, setCart } = useGlobalContext();
 
+  const handleClick = () => {
+    setCart([]);
+    window.scrollTo(0, 0);
+  };
+
   if (cart.length === 0) {
     return (
       <>
@@ -35,7 +40,7 @@ const Cart = () => {
               return <ProductCardCart key={el.id} {...el} />;
             })}
             <div className="cart-buttons">
-              <button className="btn gray" onClick={() => setCart([])}>
+              <button className="btn gray" onClick={handleClick}>
                 clear shopping cart
               </button>
               <Link to="/catalog">

@@ -4,6 +4,15 @@
   flex-direction: column;
   padding: 2.75rem;
 
+  @include laptop {
+    margin-top: 2.375rem;
+  }
+
+  @include tablet {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .order-price {
     display: flex;
     flex-direction: column;

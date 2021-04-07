@@ -18,7 +18,7 @@ const Product = () => {
   const selects = [
     {
       title: "choose color",
-      options: ["white", "gray", "black"],
+      options: ["white", "gray", "black", "red"],
     },
     {
       title: "choose size",
@@ -43,7 +43,8 @@ const Product = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setAdded(false);
-    }, 1500);
+      setQuantity(1);
+    }, 1000);
     return () => clearTimeout(timer);
   }, [added]);
 
@@ -77,7 +78,7 @@ const Product = () => {
                   Add to Cart
                 </button>
               ) : (
-                <button className="btn btn-cart-product">
+                <button className="btn btn-cart-product btn-cart-product-added">
                   <AiOutlineCheckCircle className="icon-added" />
                   Added
                 </button>

@@ -36,7 +36,7 @@ const Filter = () => {
   return (
     <div className={showFilter ? "filter active" : "filter"} ref={filterRef}>
       <span className="filter-btn" onClick={() => setShowFilter(!showFilter)}>
-        filter
+        <span className="filter-btn-label">filter</span>
         <FilterIcon />
       </span>
       <div className="filter-drop">

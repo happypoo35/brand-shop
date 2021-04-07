@@ -8,7 +8,12 @@
   .container {
     display: grid;
     grid-template-columns: 22.5rem 1fr;
-    gap: 8rem;
+    gap: clamp(1.25rem, -13.75rem + 30vw, 8rem);
+
+    @include tablet {
+      grid-template-columns: unset;
+      gap: 2.5rem;
+    }
   }
 
   &-info {
@@ -27,6 +32,11 @@
 
       svg {
         margin-right: 1.5rem;
+        min-width: 1.5rem;
+
+        @include laptop {
+          margin-right: 1rem;
+        }
       }
     }
   }

@@ -15,7 +15,7 @@ const ProductCard = ({ id, img, title, text, price }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setAdded(false);
-    }, 1500);
+    }, 1000);
     return () => clearTimeout(timer);
   }, [added]);
 
@@ -30,7 +30,7 @@ const ProductCard = ({ id, img, title, text, price }) => {
               Add to Cart
             </button>
           ) : (
-            <button className="btn btn-cart">
+            <button className="btn btn-cart btn-cart-added">
               <AiOutlineCheckCircle />
               Added
             </button>

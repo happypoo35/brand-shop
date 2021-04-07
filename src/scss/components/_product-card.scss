@@ -33,6 +33,12 @@
 
   &-info {
     padding: 1.5rem 1.125rem 1.25rem;
+
+    &:hover {
+      h4 {
+        color: $Accent;
+      }
+    }
   }
 
   h4 {

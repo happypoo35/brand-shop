@@ -47,6 +47,10 @@ h1 {
   line-height: clamp(2rem, 4vw, 2.75rem);
   white-space: nowrap;
 
+  @include mobile {
+    font-size: 2.375rem;
+  }
+
   &.page-title {
     font-size: 1.5rem;
     font-weight: 400;
@@ -56,6 +60,10 @@ h1 {
   span {
     font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 700;
+
+    @include mobile {
+      font-size: 1.25rem;
+    }
   }
 }
 
@@ -76,16 +84,28 @@ h3 {
   span {
     font-size: 1.125rem;
     font-weight: 400;
+
+    @include mobile {
+      font-size: 0.875rem;
+    }
   }
 
   &.info-title {
     font-weight: 300;
     text-align: unset;
+
+    @include laptop {
+      font-size: 1rem;
+    }
   }
 
   &.cart-item-title {
     font-weight: 400;
     text-align: unset;
+
+    @include mobile {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -142,6 +162,10 @@ p {
 
   &.info-text {
     font-size: 1.5rem;
+
+    @include laptop {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -176,6 +200,10 @@ ul {
 .benefit {
   font-size: 1.5rem;
   font-weight: 300;
+
+  @include laptop {
+    font-size: 1rem;
+  }
 }
 
 .bc-link {
@@ -191,4 +219,10 @@ ul {
 .product-price {
   font-size: 1.5rem;
   font-weight: 300;
+}
+
+.error-code {
+  font-size: 8rem;
+  font-weight: 900;
+  color: $Accent;
 }

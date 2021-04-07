@@ -11,6 +11,10 @@
     @include tablet {
       grid-template-columns: 1fr 1fr;
     }
+
+    @include mobile {
+      align-items: center;
+    }
   }
 
   .selects {
