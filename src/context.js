@@ -3,12 +3,6 @@ import data from "./data";
 
 const AppContext = React.createContext();
 
-// const initialState = {
-//   cart: [],
-//   total: 0,
-//   amount: 0,
-// };
-
 const AppProvider = ({ children }) => {
   const [products] = useState(data);
   const [showMenu, setShowMenu] = useState(false);
